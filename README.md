@@ -1,4 +1,4 @@
-# Apontem Account Service
+# Sample Java Multi-Module Lambda Project
 
 ---
 
