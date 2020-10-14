@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Sample Java multimodule Lambda project
+
+Globals:
+  Function:
+    Runtime: java11
+    MemorySize: 512
+    Timeout: 30
+
+Resources:
+  AddStudent:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: add-student/target/lambda.zip
+      Handler: com.sample.AddStudentLambda::handler
+      Runtime: java11
+      MemorySize: 512
+      Events:
+        ApiKey:
+          Type: Api
+          Properties:
+            Path: /students
+            Method: post
+
+  GetStudent:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: get-student/target/lambda.zip
+      Handler: com.sample.GetStudentLambda::handler
+      Runtime: java11
+      MemorySize: 512
+      Events:
+        ApiKey:
+          Type: Api
+          Properties:
+            Path: /students/{studentId}
+            Method: get
