@@ -1,7 +1,15 @@
 # Sample Java Multi-Module Lambda Project
 
 ---
-This is a sample multi-module Java maven project for developing REST APIs with AWS Lambda. The instructions for running the application have currently only been tested on a Mac. 
+This is a sample multi-module Java maven project for developing REST APIs with AWS Lambda. The intend is to provide you with a local development environemnt for developing a serverless application.\
+This project touches on the following AWS services and development tools.
+- Lambda functions
+- APIGateway
+- DynamoDB
+- AWS CLI
+- SAM CLI
+
+NOTE: You will not require an AWS account to run the application. The instructions for running the application have currently only been tested on a Mac.\
 
 ## Developer Setup
 Installations are available for Linux, Mac & Windows. Install the appropriate software for your operating system.
